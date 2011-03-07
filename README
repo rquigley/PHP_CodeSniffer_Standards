@@ -1,0 +1,9 @@
+pear install PHP_CodeSniffer-beta
+pear config-show | grep php_dir
+
+# symlink this dir into the Standards dir
+cd {PEAR}/PHP/CodeSniffer/Standards
+
+phpcs --config-set default_standard {this folder}
+
+phpcs file.php
